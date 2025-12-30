@@ -1,0 +1,114 @@
+.google-logo {
+  font-size: 100px;
+  font-weight: bold;
+  scroll-padding-block-end: initial;
+}
+
+.a {
+  color: rgb(75, 17, 211);
+}
+
+.b {
+  color: red;
+}
+.c {
+  color: yellow;
+}
+
+.d {
+  color: blue;
+}
+.e {
+  color: rgb(14, 243, 14);
+}
+
+.f {
+  color: red;
+}
+
+.search {
+  width: 900px;
+  height: 1000px;
+}
+
+.ai {
+  background-color: brown;
+  font-size: large;
+  font-weight: 800;
+  font-display: round;
+}
+
+.a2 {
+  font-weight: 900;
+  background-color: blue;
+  font-size: xx-large;
+}
+
+.a3 {
+  font-size: xx-large;
+  background-color: green;
+}
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: rgba(119, 136, 153, 0.062);
+}
+
+.btn-btn-primary {
+  background-color: none;
+}
+
+.searbar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
+.file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: rgba(128, 128, 128, 0.164);
+}

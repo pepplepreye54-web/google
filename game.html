@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Google — Clone (HTML + CSS)</title>
+  <style>
+    /* Reset-ish */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#202124;
+      background:#fff;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+
+    /* Top nav */
+    .topbar{
+      display:flex;
+      justify-content:flex-end;
+      gap:18px;
+      padding:12px 24px;
+      font-size:14px;
+      align-items:center;
+    }
+    .topbar a{color:#1a73e8; text-decoration:none}
+    .topbar .apps{
+      width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer
+    }
+
+    /* Main */
+    main{flex:1;display:flex;align-items:center;justify-content:center}
+    .center-column{width:100%;max-width:780px;padding:40px 24px;display:flex;flex-direction:column;align-items:center}
+
+    /* Logo */
+    .logo{font-weight:700;font-size:92px;letter-spacing:-4px;margin-bottom:24px;line-height:1}
+    /* Google-like colors */
+    .logo span:nth-child(1){color:#4285F4}
+    .logo span:nth-child(2){color:#EA4335}
+    .logo span:nth-child(3){color:#FBBC05}
+    .logo span:nth-child(4){color:#4285F4}
+    .logo span:nth-child(5){color:#34A853}
+    .logo span:nth-child(6){color:#EA4335}
+
+    /* Search box */
+    .search-box{
+      width:100%;
+      display:flex;
+      align-items:center;
+      border:1px solid #dfe1e5;
+      box-shadow:0 1px 6px rgba(32,33,36,0.28);
+      padding:10px 14px;
+      border-radius:24px;
+      max-width:584px;
+      background:#fff;
+      transition:box-shadow .15s, border-color .15s;
+    }
+    .search-box:focus-within{border-color:#c6dafc;box-shadow:0 1px 6px rgba(66,133,244,0.2)}
+
+    .search-box input{
+      border:0;outline:0;flex:1;font-size:16px;padding:8px 10px;
+    }
+
+    .icons{display:flex;gap:10px;align-items:center}
+    .icon-btn{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;cursor:pointer}
+    .icon-btn svg{width:18px;height:18px;opacity:.6}
+
+    /* Buttons */
+    .buttons{margin-top:22px;display:flex;gap:12px}
+    .btn{
+      background:#f8f9fa;border:1px solid #f8f9fa;padding:10px 16px;border-radius:4px;font-size:14px;cursor:pointer;color:#3c4043
+    }
+    .btn.primary{background:#f8f9fa}
+    .btn.secondary{background:#f8f9fa}
+
+    /* Footer */
+    footer{background:#f2f2f2;padding:14px 24px;font-size:14px}
+    .footer-top{display:flex;justify-content:space-between;align-items:center;max-width:980px;margin:0 auto}
+    .left-links a,.right-links a{margin-right:18px;color:#5f6368;text-decoration:none}
+
+    /* Small screens */
+    @media (max-width:520px){
+      .logo{font-size:72px}
+      .search-box{max-width:92%}
+      .topbar{padding:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <div class="apps" title="Google apps">◻</div>
+    <a href="#" style="color:#1a73e8">Sign in</a>
+  </div>
+
+  <main>
+    <div class="center-column">
+      <!-- Logo (text-based for this clone) -->
+      <h1 class="logo" aria-label="Google logo">
+        <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+      </h1>
+
+      <!-- Search box -->
+      <form class="search-box" role="search" onsubmit="event.preventDefault();alert('This is a static clone — implement search backend to make it work.');">
+        <div class="icons">
+          <!-- magnifying glass -->
+          <div class="icon-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+        </div>
+        <input type="search" placeholder="Search Google or type a URL" aria-label="Search" />
+        <div class="icons" style="margin-left:8px">
+          <div class="icon-btn" title="Voice search" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v11"></path><path d="M19 11a7 7 0 0 1-14 0"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg>
+          </div>
+        </div>
+      </form>
+
+      <div class="buttons">
+        <button class="btn primary">Google Search</button>
+        <button class="btn secondary">I'm Feeling Lucky</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="left-links">
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">About</a>
+      </div>
+      <div class="right-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
